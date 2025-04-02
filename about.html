@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogi Coffee</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/kTc1f8f8j1k8iVfGBrS2jy4v2K9bF7ZyU0Gk3G/9BJ69nL3rU5+7EaH6QOvHdIurLqej1ouVf/GMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        /* Reset dasar */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Bagian section profil */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Bagian gambar profil */
+        .profile-image {
+            margin-right: 20px;
+            text-align: center;
+            /* Supaya teks di bawah gambar terpusat */
+        }
+
+        .profile-image img {
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        /* Nama di bawah gambar */
+        .profile-image .profile-name {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Bagian social media */
+        .social-links {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            /* Rata tengah */
+            gap: 10px;
+            /* Jarak antar tautan */
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: #2980b9;
+        }
+
+        /* Konten profil */
+        .profile-content {
+            max-width: 600px;
+        }
+
+        .profile-content h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-content h3 {
+            margin-bottom: 15px;
+            color: #100a0a;
+        }
+
+        .profile-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Container untuk bagian detail */
+        .container {
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Tombol "Selengkapnya" */
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        nav {
+            background: #3e1a01;
+
+        }
+
+        #nav-menu :hover {
+            color: #0044e2;
+        }
+
+        img {
+            border-radius: 100px;
+            border: 3px solid rgb(253, 184, 7);
+        }
+
+        .profile-image {
+            text-align: center;
+            padding: 10%px;
+
+
+        }
+
+        .profile-content {
+            text-align: left;
+            padding: 10%px;
+        }
+
+        .profile-content {
+            text-align: center;
+        }
+
+        #karyawan-img {
+            background: white;
+            text-align: left;
+
+            margin: 10px;
+            padding: 25px;
+
+
+        }
+
+
+
+        /* ini bagian galeri */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav-menu">
+        <div class="logo"> <img src="img/1.png" alt="" width="50px"></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+
+    <!-- ini bagian profile / sejarah -->
+
+    <body>
+
+        <section class="profile-section">
+            <div class="profile-image">
+
+                <div class="profile-content">
+                    <img src="imgs/1.jpg" alt="Profile Sepi Wanimbo">
+                    <h1 style="color: #100a0a; color: #de8110;">Profil Kedai Kopi Nogi</h1>
+                    <p>Kedai Kopi Nogi adalah sebuah kafe yang terletak di Jln Rian, sebelah SMA PGRI Wamena, Kabupaten
+                        Jayawijaya, Papua. Kedai ini dikenal sebagai tempat yang nyaman untuk menikmati kopi dengan cita
+                        rasa khas, sekaligus menjadi tempat inspiratif bagi anak muda Papua.
+
+                        Kedai ini didirikan dengan semangat untuk memajukan bisnis kopi lokal serta memberdayakan
+                        anak-anak
+                        muda Papua agar dapat berkembang di dunia kerja dan wirausaha.</p>
+                </div>
+
+                </p>
+                <div class="container">
+                    <!-- Bagian detail yang akan ditampilkan atau disembunyikan -->
+                    <div id="detail" class="hidden">
+                        <h2>Profile Kedai Kopi Nogi</h2>
+                        <p>
+                            Sepi Wanimbo adalah seorang pengusaha muda dan barista berbakat yang mengawali kariernya
+                            dari
+                            nol. Berbekal tekad dan kegigihan, ia mendalami seluk-beluk dunia kopi, mulai dari
+                            proses
+                            pemilihan biji kopi terbaik, teknik roasting yang tepat, hingga cara menyajikan kopi
+                            berkualitas
+                            tinggi.
+                        </p>
+                        <h3>Perjalanan dan Pencapaian</h3>
+                        <p>
+                            ✅ Lahir dan besar di Papua – Sepi Wanimbo tumbuh di lingkungan yang kaya akan tradisi
+                            dan
+                            budaya, yang membentuknya menjadi pribadi yang tangguh dan inovatif.<br>
+                            ✅ Pendidikan dan pengalaman – Ia menempuh pendidikan dengan fokus pada kewirausahaan dan
+                            industri kopi, serta mengikuti berbagai pelatihan untuk meningkatkan keahliannya.<br>
+                            ✅ Kedai Kopi Nogi – Berperan sebagai motor penggerak utama dalam pengelolaan kedai ini,
+                            ia
+                            memastikan setiap cangkir kopi yang disajikan memiliki cita rasa autentik Papua.<br>
+                            ✅ Pelestarian Budaya Lokal – Selain membangun usaha, ia juga aktif dalam mengangkat
+                            budaya
+                            dan
+                            tradisi Papua melalui kopi, menciptakan ruang bagi masyarakat untuk berkumpul dan
+                            berbagi
+                            cerita.<br>
+                            ✅ Inovasi dan Visi – Dengan visinya, Sepi Wanimbo ingin membawa kopi Papua ke tingkat
+                            yang
+                            lebih
+                            tinggi, dikenal tidak hanya di dalam negeri tetapi juga di kancah internasional.
+                        </p>
+                    </div>
+                    <button onclick="tampilkanDetail()">Selengkapnya</button>
+                </div>
+                </>
+        </section>
+
+
+        <section id="karyawan-img">
+            <div id="karyawan-img">
+                <h3>Profil Ketua & Karyawan</h3>
+                <h2 style="color: #935406;">Karyawan yang Ada di caffe Nogi .</h2>
+
+                <img src="imgs/kk.jpg" alt="" width="100px">
+                <div class="social-icon">
+                    <img src="sosmed/fb-removebg-preview.png" alt="" width="30">
+                    <img src="sosmed/ig-removebg-preview.png" alt="" width="30px">
+                    <img src="sosmed/ytb-removebg-preview.png" alt="" width="30px">
+                    <img src="sosmed/whap-removebg-preview.png" alt="" width="30px">
+
+                </div>
+                <p>1. Ketua Kedai Kopi Nogi: Seorang Sepi Wanimbo, S.AB</p>
+                <p>Sepi Wanimbo adalah sosok inspiratif yang berasal dari Kabupaten Lanny Jaya. Ia adalah seorang anak
+                    muda Papua yang bekerja keras membangun Kedai Kopi Nogi. Dengan latar belakang pendidikan Sarjana
+                    Administrasi Bisnis (S.AB), ia memiliki visi untuk menjadikan Kedai Kopi Nogi sebagai pusat ekonomi
+                    kreatif bagi anak muda di Wamena.</p>
+                <p>Sebagai pemimpin, Sepi Wanimbo bertanggung jawab atas:
+                    <br>
+                    ✅ Mengelola bisnis dan strategi pemasaran kedai.
+                    <br>
+                    ✅ Menjalin kerja sama dengan petani kopi lokal.
+                    <br>
+                    ✅ Meningkatkan kualitas pelayanan dan produk.
+                    <br>
+                    ✅ Memberikan motivasi serta pelatihan kepada karyawan.
+                </p>
+
+                <img src="imgs/jowel kogoya.jpg" alt="" width="100px">
+                <div class="social-icon">
+                    <img src="sosmed/fb-removebg-preview.png" alt="" width="30">
+                    <img src="sosmed/ig-removebg-preview.png" alt="" width="30px">
+                    <img src="sosmed/ytb-removebg-preview.png" alt="" width="30px">
+                    <img src="sosmed/whap-removebg-preview.png" alt="" width="30px">
+
+                </div>
+                <h5>2. Jowel Kogoya – Barista & Pengelola Stok Kopi</h5>
+                <br>
+                <p>Owel Kogoya adalah salah satu karyawan yang bertugas sebagai barista di Kedai Kopi Nogi. Ia memiliki
+                    keahlian dalam meracik berbagai jenis kopi, mulai dari kopi hitam, espresso, hingga cappuccino.</p>
+                <br>
+                <h3>Tugasnya meliputi:</h3>
+                <br>
+                <p>☕ Membuat dan menyajikan kopi berkualitas kepada pelanggan.
+                    <br>
+                    ☕ Mengelola stok bahan baku seperti biji kopi, susu, dan gula.
+                    <br>
+                    ☕ Memastikan kebersihan dan kerapihan area barista.
+                    <br>
+                    ☕ Memberikan rekomendasi minuman kepada pelanggan.
+                </p>
+                <br>
+                <img src="/img/lo.jpg" alt="" width="100px">
+                <div class="social-icon">
+                    <img src="sosmed/fb-removebg-preview.png" alt="" width="30">
+                    <img src="sosmed/ig-removebg-preview.png" alt="" width="30px">
+                    <img src="sosmed/ytb-removebg-preview.png" alt="" width="30px">
+                    <img src="sosmed/whap-removebg-preview.png" alt="" width="30px">
+                    <h3>3. Saldo Kogoya – Kasir & Customer Service</h3>
+                    <br>
+                    <p>Saldo Kogoya bertugas sebagai kasir dan customer service di Kedai Kopi Nogi. Ia bertanggung jawab
+                        dalam memastikan transaksi berjalan lancar serta memberikan pelayanan terbaik kepada pelanggan.
+                    </p>
+                    <br>
+                    <h3>Tugasnya meliputi:</h3>
+                    <br>
+                    💰 Mengelola transaksi pembayaran pelanggan (tunai & digital).
+                    <br>
+                    💰 Mencatat pemasukan dan pengeluaran harian.
+                    <br>
+                    💰 Menyambut pelanggan dengan ramah dan membantu mereka dalam memilih menu.
+                    <br>
+                    💰 Menanggapi pertanyaan dan keluhan pelanggan dengan baik.
+                </div>
+
+
+                <section id="galeri">
+                    <h1>Galeri Kami:</h1>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="imgs/3.jpg" alt="Gambar 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/7.jpg" alt="Gambar 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/1.jpg" alt="Gambar 3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/2.jpg" alt="Gambar 4">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/kk.jpg" alt="Gambar 5">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/5.jpg" alt="Gambar 6">
+                        </div>
+                    </div>
+                </section>
+
+        </section>
+        <!-- JavaScript -->
+        <script>
+            function tampilkanDetail() {
+                const detail = document.getElementById("detail");
+                detail.classList.toggle("hidden");
+            }
+        </script>
+
+    </body>
+
+    <!-- ini bagiang footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © Kedai Kopi Nogi 2025</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

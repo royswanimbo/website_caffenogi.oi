@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogi Coffee</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        body {
+            background-color: rgb(18, 85, 36);
+        }
+
+
+
+
+
+        .menu-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            border: 2px solid #e4e4e4;
+            position: relative;
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #menu-nama {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            border: 4px solid rgb(22, 120, 53);
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .menu-img {
+            width: 200px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        .love-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .love-button.liked {
+            color: red;
+        }
+
+        #search-box {
+            padding: 10px;
+            width: 50%;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .menu-list {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .order-button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-decoration: none;
+        }
+
+        .order-button:hover,
+        .order-button:active {
+            background-color: #1EBEA5;
+        }
+
+        #nav-menu :hover {
+            color: #0044e2;
+        }
+
+        img {
+            border-radius: 100px;
+        }
+    </style>
+    <script>
+        function searchMenu() {
+            let input = document.getElementById('search-box').value.toLowerCase();
+            let menuItems = document.getElementsByClassName('menu-item');
+
+            for (let i = 0; i < menuItems.length; i++) {
+                let itemName = menuItems[i].querySelector('h2').innerText.toLowerCase();
+                if (itemName.includes(input)) {
+                    menuItems[i].style.display = "block";
+                } else {
+                    menuItems[i].style.display = "none";
+                }
+            }
+        }
+
+        function toggleLove(button) {
+            button.classList.toggle('liked');
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav id="nav-menu">
+        <div class="logo"> <img src="img/1.png" alt="" width="50px"></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>
+    <br>
+    <section>
+
+        <h1 style="text-align: center; color: #a14604;"><img src="/imgs/ql.jpg" alt="" width="30px">Daftar Menu : 👇
+        </h1>
+    </section>
+    <!-- ini bagian profile / sejarah -->
+
+    <section class="menu-section">
+        <!-- <section style="text-align: center;"> <img src="OIP__2_-removebg-preview(1).png" alt=""></section> -->
+        <section>
+            <div id="menu-nama">
+
+                <br>
+                <h3>
+                    1. Americano 18K
+                </h3>
+                <h3>
+                    2. Turkish 18K
+                </h3>
+                <h3>
+                    3. Long Black 15K
+                </h3>
+                <h3>
+                    4. Espresso 25K
+                </h3>
+                <h3>
+                    5. Croissant 20K
+                </h3>
+                <h3>
+                    6. Cheesecake 25K
+                </h3>
+                <h3>
+                    7. Cappuccino 20K
+                </h3>
+
+                <h3>
+                    8. Latte 15K
+                </h3>
+                <h3>
+                    9. Mocha 18K
+                </h3>
+                <h3>
+                    10. Macchiato 25K
+                </h3>
+                <h3>
+                    11. Affogato 25K
+                </h3>
+                <h3>
+                    11. Affogato 20K
+                </h3>
+                <h3>
+                    13. Irish Coffee 25K
+                </h3>
+                <h3>
+                    14. Ristretto 20K
+                </h3>
+                <h3>
+                    15. Doppio 15K
+                </h3>
+                <br>
+            </div>
+        </section>
+        <h1>Menu 📝</h1>
+
+
+        <p>Ayo Cari Menu Sesuai Favorit Anda!☕</p <div class="menu-list">
+        </div>
+        <input type="text" id="search-box" onkeyup="searchMenu()" placeholder="Cari menu...">
+        <div class="menu-container" id="menu-container"></div>
+        <script>
+            let menuData = [
+                "Americano", "Turkish", "Long Black", "Espresso", "Croissant", "Cheesecake",
+
+
+            ];
+            let menuContainer = document.getElementById('menu-container');
+            menuData.forEach((menu, index) => {
+                let menuItem = document.createElement('div');
+                menuItem.classList.add('menu-item');
+                menuItem.innerHTML = `
+                    <img class="menu-img" src="img/${index + 1}.jpg" alt="${menu}" />
+                    <button class="love-button" onclick="toggleLove(this)">❤</button>
+                    <h2>${menu}</h2>
+                    <p>18K</p>
+                    <a href="https://wa.me/6285335071563?text=Pesan%20${menu}" class="order-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Pesan
+                    </a>
+                `;
+                menuContainer.appendChild(menuItem);
+            });
+        </script>
+    </section>
+
+    <!-- ini bagiang footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © Kedai Kopi Nogi 2025</p>
+
+            <div class="social-icons">
+                <img src="sosmed/fb-removebg-preview.png" alt="" width="30">
+                <img src="sosmed/ig-removebg-preview.png" alt="" width="30px">
+                <img src="sosmed/ytb-removebg-preview.png" alt="" width="30px">
+                <img src="sosmed/whap-removebg-preview.png" alt="" width="30px">
+                <img src="sosmed/tsetup-x64.5.9.0.exe" alt="" width="30px">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

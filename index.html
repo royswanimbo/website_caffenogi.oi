@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<style>
+    #nav-menu :hover {
+        color: #0044e2;
+    }
+
+    #nav-menu {
+        background: #3e1a01;
+        display: inline;
+        display: flex;
+
+
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+
+    .heo-image {
+        width: 50%;
+        height: 50px;
+        padding: 1%;
+        display: inline;
+        display: flex;
+    }
+
+    img {
+        border-radius: 100px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogi Coffee</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/kTc1f8f8j1k8iVfGBrS2jy4v2K9bF7ZyU0Gk3G/9BJ69nL3rU5+7EaH6QOvHdIurLqej1ouVf/GMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <nav id="nav-menu">
+        <img src="img/1.png" alt="" width="50px">
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 style="color: #c7c6c5;">Selamat Datang di Kedai Kopi Nogi</h1>
+            <p style="color: #fffbfb;"> Nikmati cita rasa kopi terbaik dengan sentuhan khas Papua. Rasakan kehangatan
+                dan inspirasi dalam setiap
+                tegukan kopi kami.</p>
+            <a href="about.html" class="btn1">Profile</a>
+            <a href="menu.html" class="btn2">Pesan Sekarang</a>
+        </div>
+        <div class="hero-image">
+            <img src="img/kk.jpg" alt="Gambar Kopi">
+        </div>
+    </section>
+    <br>
+
+    <!-- ini bagiang footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © Kedai Kopi Nogi 2025</p>
+
+            <div class="social-icons">
+                <img src="sosmed/fb-removebg-preview.png" alt="" width="30">
+                <img src="sosmed/ig-removebg-preview.png" alt="" width="30px">
+                <img src="sosmed/ytb-removebg-preview.png" alt="" width="30px">
+                <img src="sosmed/whap-removebg-preview.png" alt="" width="30px">
+                <img src="sosmed/tsetup-x64.5.9.0.exe" alt="" width="30px">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

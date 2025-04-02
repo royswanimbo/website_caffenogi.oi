@@ -1,0 +1,408 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  padding: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #94695f;
+}
+
+/* Menu Toggle untuk Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+/* ini bagian section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  /* background: url(/OIP__2_-removebg-preview\(1\).png); */
+  background-image: url("/img/create-ultra-realistic-objects.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: rgb(47, 36, 36);
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: rgb(21, 20, 20);
+}
+
+.btn1 {
+  padding: 10px 20px;
+  background: blue;
+  color: #fff;
+  border: 3px solid rgb(246, 246, 252);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn1:hover {
+  background: #293084;
+}
+
+.btn2 {
+  padding: 10px 20px;
+  background: rgb(250, 251, 251);
+  color: black;
+  border: 3px solid rgb(9, 106, 234);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn2:hover {
+  background: #abaab6;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  margin-left: 10px;
+  width: 50%;
+  border-radius: 8px;
+  border: 7px solid rgb(178, 107, 20);
+}
+
+/* Responsive untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 0 20px 0;
+  }
+}
+
+/* ini bagiang style.css profile */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: #573d1c;
+}
+
+.profile-image {
+  flex: 1;
+  margin-right: 10px; /* Jarak antara gambar dan konten */
+}
+
+.profile-image img {
+  width: 50%;
+  border-radius: 8px;
+  border: 7px solid rgb(9, 67, 5);
+}
+
+.profile-content {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.profile-content h1 {
+  font-size: 20.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-content p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* about section */
+.about,
+.product,
+.contact {
+  position: relative;
+  width: 100%;
+  padding: 90px 60px 20px 60px;
+}
+
+.about h2,
+.product h2,
+.contact h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about h2 span,
+.product h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row,
+.contact .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .row .image-wrapper,
+.about .row .content,
+.contact .row .image-wrapper,
+.contact .row .form-wrapper {
+  position: relative;
+}
+
+.about .row .image-wrapper,
+.contact .row .image-wrapper {
+  width: 30%;
+}
+
+.about .row .image-wrapper .image,
+.contact .row .image-wrapper .image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content,
+.contact .row .form-wrapper {
+  width: 40%;
+}
+
+.about .row .content h3 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about .row .content p {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 1.4rem;
+}
+
+/* Responsive untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image,
+  .profile-content {
+    margin: 0;
+  }
+
+  .profile-image {
+    margin-bottom: 20px;
+  }
+}
+
+/* ini bagiang footer */
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #0e0c0c;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ece8e7;
+}
+
+/* cidung  style.css ini bagiang dari "menu"  */
+/* Mengatur margin dan padding default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mengatur background dan font */
+body {
+  background-color: #6c5d5d; /* Warna oranye sesuai tampilan pada gambar */
+  font-family: Arial, sans-serif;
+}
+
+/* Section Menu */
+.menu-section {
+  padding: 20px;
+}
+
+#sosmed {
+  width: 50px;
+}
+
+/* Judul "Menu" */
+.menu-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Container untuk grid menu */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 20px; /* jarak antar item */
+  justify-items: center; /* posisikan item di tengah */
+}
+
+/* Setiap item menu */
+.menu-item {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 200px; /* lebar card */
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar di dalam item menu */
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Info menu: nama kopi & harga */
+.menu-info h2 {
+  margin: 10px 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.menu-info p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Tombol "Pesan" */
+.pesan-button {
+  background-color: #57c85f;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.pesan-button:hover {
+  background-color: #45a74b; /* efek hover */
+}
+
+/* Bagian Footer */
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.footer-left,
+.footer-right {
+  color: #000;
+  font-weight: bold;
+}

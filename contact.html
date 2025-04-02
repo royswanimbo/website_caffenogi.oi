@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Kontak - Kedai Kopi Nogi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #604827;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #302d2d;
+            color: white;
+            padding: 10px 20px;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdd00;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: #604827;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .contact-form,
+        .contact-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #412f2f;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a .bi-facebook {
+            color: #3972ed;
+        }
+
+        .social-icons a .bi-twitter {
+            color: #1da1f2;
+        }
+
+        .social-icons a .bi-instagram {
+            color: #f728ab;
+        }
+
+        .social-icons a .bi-youtube {
+            color: #fe3e3e;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #343333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        img {
+            border-radius: 100px;
+        }
+
+        #nav-menu :hover {
+            color: #0044e2;
+        }
+
+        .bi-geo-alt-fill {
+            color: #f00909;
+        }
+
+        .bi-telephone-fill {
+            color: rgb(14, 201, 45);
+        }
+
+        .bi-envelope-fill {
+            color: rgb(239, 239, 238);
+        }
+
+        .bi-globe {
+            color: rgb(45, 114, 225);
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav-menu">
+
+        <img src="img/1.png" alt="" width="50px">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+    <div class="container">
+        <div class="contact-form">
+            <h2>Kontak Kami</h2>
+            <form>
+                <input type="text" name="name" placeholder=" Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <p><i class="bi bi-geo-alt-fill"></i>Alamat: Lokasi Kami</p>
+            <p><i class="bi bi-telephone-fill"></i> Phone: +62 123 456 789</p>
+            <p><i class="bi bi-envelope-fill"></i> Email: caffenogi@gmail.com</p>
+            <p><i class="bi bi-globe"></i> Website: www.kedaikopinogi.com</p>
+            <div class="map-container">
+                <h3>Lokasi Kami</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63673.58339444213!2d138.89324841336807!3d-4.101716343177898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e6cf6892ac933%3A0x69015e62e93271f9!2sJl.%20Bayangkara%2C%20Hurekama%2C%20Distrik%20Wamena%2C%20Kabupaten%20Jayawijaya%2C%20Papua%2099511!5e0!3m2!1sen!2sid!4v1743509427122!5m2!1sen!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" width="20%" height="20"
+                    style="border-radius:10px;"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; Kedai Kopi Nogi 2025</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
